@@ -1,7 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
+@import "./theme/fonts.css";
+
+:root {
+  color: #071b45;
+  background: #fdfcf9;
+  font-family: var(--font-primary);
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  text-rendering: optimizeLegibility;
+  min-width: 320px;
+  background: #fdfcf9;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+.site-shell {
+  min-height: 100vh;
+  padding-top: 104px;
+  background: #fdfcf9;
+}
+
+@media (max-width: 760px) {
+  .site-shell {
+    padding-top: 84px;
+  }
 }

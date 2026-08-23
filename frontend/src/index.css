@@ -26,12 +26,29 @@ a {
 
 .site-shell {
   min-height: 100vh;
-  padding-top: 104px;
+  padding-top: 106px;
   background: #fdfcf9;
+}
+
+.hero-section,
+.hero-content {
+  min-height: clamp(620px, 48vw, 760px);
+}
+
+@media (max-width: 1366px) and (min-width: 761px) {
+  .hero-section,
+  .hero-content {
+    min-height: 680px;
+  }
 }
 
 @media (max-width: 760px) {
   .site-shell {
-    padding-top: 84px;
+    padding-top: 100px;
+  }
+
+  .hero-section,
+  .hero-content {
+    min-height: 800px;
   }
 }

@@ -13,7 +13,7 @@ const navItems = [
 export function Header() {
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-10 flex h-[104px] w-full items-center gap-[38px] bg-[#fdfcf9] px-12 pb-2.5 pt-3 font-primary shadow-[0_2px_10px_rgba(1,17,59,0.06)] max-[1000px]:gap-[18px] max-[1000px]:px-8 max-[760px]:h-[84px] max-[760px]:justify-between max-[760px]:px-5 max-[760px]:py-2">
+      <header className="fixed inset-x-0 top-0 z-10 flex w-full items-center gap-[38px] bg-[#fdfcf9] px-12 pb-2.5 pt-3 font-primary shadow-[0_2px_10px_rgba(1,17,59,0.06)] max-[1000px]:gap-[18px] max-[1000px]:px-8 max-[760px]:justify-between max-[760px]:px-5 max-[760px]:py-2">
         <a
           className="flex h-[84px] w-[278px] items-center no-underline max-[1000px]:w-[230px] max-[760px]:w-[204px]"
           href="#home"

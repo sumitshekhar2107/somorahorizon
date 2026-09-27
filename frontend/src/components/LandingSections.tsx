@@ -178,8 +178,11 @@ export function LandingSections() {
               href="#contact-us"
             >
               ENQUIRE ABOUT SOMORA{" "}
-              <span className="text-white" aria-hidden="true">
-                ↗
+              <span
+                className="text-xl font-normal leading-none text-white"
+                aria-hidden="true"
+              >
+                &#8594;
               </span>
             </a>
           </div>
@@ -336,7 +339,13 @@ export function LandingSections() {
             className="inline-flex shrink-0 items-center justify-center gap-3 rounded-[6px] bg-[linear-gradient(90deg,#B87818_0%,#E4AD4D_100%)] px-7 py-4 text-xs font-bold tracking-[0.14em] text-white no-underline shadow-[0_8px_20px_rgba(61,39,29,0.12)] transition hover:brightness-105"
             href="mailto:admin@somorahorizon.com?subject=SomoRa%20updates"
           >
-            STAY IN TOUCH <span aria-hidden="true">↗</span>
+            STAY IN TOUCH{" "}
+            <span
+              className="text-xl font-normal leading-none text-white"
+              aria-hidden="true"
+            >
+              &#8594;
+            </span>
           </a>
         </div>
       </section>

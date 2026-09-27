@@ -35,8 +35,11 @@ export function QualityPage() {
             href="#test-report"
           >
             VIEW TEST REPORT
-            <span className="text-lg leading-none" aria-hidden="true">
-              ↓
+            <span
+              className="text-xl font-normal leading-none text-white"
+              aria-hidden="true"
+            >
+              &#8594;
             </span>
           </a>
         </div>

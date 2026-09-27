@@ -144,7 +144,7 @@ export function LandingSections() {
     <>
       <section
         id="shop"
-        className="bg-[#fbf7ef] px-6 py-24 text-[#3d271d] max-[760px]:py-16"
+        className="bg-[#fbf7ef] px-6 py-24 text-[#3d271d] max-[760px]:pb-16 max-[760px]:pt-3"
       >
         <div
           id="all-products"

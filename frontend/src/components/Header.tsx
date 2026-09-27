@@ -14,6 +14,7 @@ export function Header() {
   const [activeHash, setActiveHash] = useState(
     () => window.location.hash.slice(1) || "home",
   );
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const updateActiveHash = () =>
@@ -52,7 +53,7 @@ export function Header() {
 
               return (
                 <a
-                  className={`relative inline-flex items-center gap-[7px] pb-2 text-[15px] font-semibold text-[#3d271d] no-underline after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:bg-[#e4ad4d] after:transition-transform after:duration-300 hover:text-[#792b35] focus-visible:text-[#792b35] ${isActive ? "after:scale-x-100" : "after:scale-x-0"}`}
+                  className={`relative inline-flex items-center gap-[7px] pb-2 text-[15px] font-bold no-underline after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-full after:origin-left after:bg-[#e4ad4d] after:transition-transform after:duration-300 hover:text-[#792b35] focus-visible:text-[#792b35] ${isActive ? "text-[#792b35] after:scale-x-100" : "text-[#3d271d] after:scale-x-0"}`}
                   href={`#${target}`}
                   key={item}
                   aria-current={isActive ? "page" : undefined}
@@ -111,7 +112,62 @@ export function Header() {
             </svg>
             <span className="font-medium">Cart</span>
           </button>
+          <button
+            className="hidden h-10 w-10 cursor-pointer items-center justify-center rounded-md border border-[#e8dcc7] bg-transparent text-[#3d271d] hover:border-[#e4ad4d] hover:text-[#792b35] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e4ad4d] max-[760px]:inline-flex"
+            type="button"
+            aria-label={
+              mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setMobileMenuOpen((open) => !open)}
+          >
+            <svg
+              className="h-6 w-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              aria-hidden="true"
+            >
+              {mobileMenuOpen ? (
+                <path d="m6 6 12 12M18 6 6 18" />
+              ) : (
+                <path d="M4 7h16M4 12h16M4 17h16" />
+              )}
+            </svg>
+          </button>
         </div>
+
+        {mobileMenuOpen && (
+          <nav
+            id="mobile-navigation"
+            className="absolute inset-x-0 top-full border-t border-[#e8dcc7] bg-[#fffdf8] px-5 py-3 shadow-[0_14px_24px_rgba(61,39,29,0.12)] max-[760px]:block"
+            aria-label="Mobile navigation"
+          >
+            {navItems.map((item) => {
+              const target =
+                item === "Quality & Testing"
+                  ? "quality"
+                  : item.toLowerCase().replaceAll(" ", "-");
+              const isActive = activeHash === target;
+
+              return (
+                <a
+                  className={`flex items-center justify-between border-b border-[#eadfcf] py-3 text-sm font-semibold no-underline last:border-b-0 ${isActive ? "text-[#792b35]" : "text-[#3d271d]"}`}
+                  href={`#${target}`}
+                  key={item}
+                  aria-current={isActive ? "page" : undefined}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item}
+                  {item === "Shop" && <span aria-hidden="true">⌄</span>}
+                </a>
+              );
+            })}
+          </nav>
+        )}
       </header>
     </>
   );

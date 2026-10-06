@@ -12,6 +12,8 @@
   --somora-cream: #fbf7ef;
   --somora-white: #fffdf8;
   --somora-burgundy: #792b35;
+  /* Scales with viewport so gutters stay proportional across zoom levels */
+  --page-max: clamp(1280px, 90vw, 1680px);
 }
 
 * {
@@ -27,6 +29,28 @@ body {
 button,
 a {
   font-family: inherit;
+}
+
+/* Shared centered content width; in components layer so utilities can override */
+@layer components {
+  .page-container {
+    width: 100%;
+    max-width: var(--page-max);
+    margin-inline: auto;
+    padding-inline: 2.5rem;
+  }
+
+  @media (max-width: 1000px) {
+    .page-container {
+      padding-inline: 2rem;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .page-container {
+      padding-inline: 1.25rem;
+    }
+  }
 }
 
 .site-shell {
@@ -87,7 +111,7 @@ a {
 
 @media (max-width: 760px) {
   .site-shell {
-    padding-top: 82px;
+    padding-top: 77px;
   }
 
   .hero-section,

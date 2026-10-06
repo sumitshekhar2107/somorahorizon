@@ -144,11 +144,11 @@ export function LandingSections() {
     <>
       <section
         id="shop"
-        className="bg-[#fbf7ef] px-6 py-24 text-[#3d271d] max-[760px]:pb-16 max-[760px]:pt-3"
+        className="bg-[#fbf7ef] py-24 text-[#3d271d] max-[760px]:pb-16 max-[760px]:pt-3"
       >
         <div
           id="all-products"
-          className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-[0.9fr_1.1fr] max-[760px]:gap-9"
+          className="page-container grid items-center gap-16 md:grid-cols-[0.9fr_1.1fr] max-[760px]:gap-9"
         >
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#9b6b2e]">
@@ -206,9 +206,9 @@ export function LandingSections() {
 
       <section
         id="the-bilona-way"
-        className="border-y border-[#e9ddc9] bg-[#f2eadb] px-6 py-24 text-[#3d271d] max-[760px]:py-16"
+        className="border-y border-[#e9ddc9] bg-[#f2eadb] py-24 text-[#3d271d] max-[760px]:py-16"
       >
-        <div className="mx-auto max-w-6xl">
+        <div className="page-container">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#9b6b2e]">
               The Bilona way
@@ -245,8 +245,8 @@ export function LandingSections() {
         </div>
       </section>
 
-      <section className="bg-[#3d271d] px-6 py-24 text-[#fffdf8] max-[760px]:py-16">
-        <div className="mx-auto max-w-6xl">
+      <section className="bg-[#3d271d] py-24 text-[#fffdf8] max-[760px]:py-16">
+        <div className="page-container">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-xl">
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#e4ad4d]">
@@ -284,9 +284,9 @@ export function LandingSections() {
 
       <section
         id="our-story"
-        className="bg-[#fffdf8] px-6 py-24 text-[#3d271d] max-[760px]:py-16"
+        className="bg-[#fffdf8] py-24 text-[#3d271d] max-[760px]:py-16"
       >
-        <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
+        <div className="page-container grid items-center gap-14 md:grid-cols-2">
           <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] max-[760px]:min-h-[300px]">
             <img
               className="absolute inset-0 h-full w-full object-cover object-[70%_center]"
@@ -321,8 +321,8 @@ export function LandingSections() {
         </div>
       </section>
 
-      <section className="px-6 pb-20 text-[#3d271d] max-[760px]:pb-14">
-        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-8 rounded-[2rem] bg-[#efe2ca] px-10 py-11 md:flex-row md:items-center md:px-14">
+      <section className="page-container pb-20 text-[#3d271d] max-[760px]:pb-14">
+        <div className="flex flex-col justify-between gap-8 rounded-[2rem] bg-[#efe2ca] px-10 py-11 md:flex-row md:items-center md:px-14">
           <div className="max-w-xl">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#8c5d27]">
               A note from SomoRa

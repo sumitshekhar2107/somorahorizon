@@ -68,7 +68,7 @@ export function HeroSection() {
       />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#fbf7ef_0%,rgba(251,247,239,0.97)_33%,rgba(251,247,239,0.76)_48%,rgba(251,247,239,0)_68%)] max-[760px]:bg-[linear-gradient(180deg,rgba(61,39,29,0.035)_0%,rgba(61,39,29,0.025)_34%,rgba(61,39,29,0.01)_68%,rgba(61,39,29,0)_100%)]" />
 
-      <div className="hero-content mx-auto flex w-full max-w-[1440px] items-center px-16 pb-32 pt-8 max-[1000px]:px-8 max-[760px]:items-start max-[760px]:px-3 max-[760px]:pb-52 max-[760px]:pt-3">
+      <div className="hero-content page-container flex items-center pb-32 pt-8 max-[760px]:items-start max-[760px]:px-3 max-[760px]:pb-52 max-[760px]:pt-3">
         <div className="relative -translate-y-8 max-w-[610px] text-[#3d271d] max-[760px]:translate-y-0 max-[760px]:max-w-[calc(100vw-48px)]">
           <p className="hero-fade-up hero-fade-up-heading inline-flex items-center gap-2 rounded-full border border-[#e4ad4d]/60 bg-[#fffdf8]/85 px-4 py-2 font-secondary text-[11px] font-bold tracking-[0.08em] text-[#6d4825] max-[760px]:gap-1 max-[760px]:px-2 max-[760px]:py-1.5 max-[760px]:text-[8px] max-[760px]:tracking-normal">
             TRADITIONALLY CRAFTED{" "}
@@ -133,7 +133,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 z-10 grid h-[92px] w-[calc(100%-96px)] max-w-[1312px] -translate-x-1/2 grid-cols-4 rounded-2xl bg-[#FFFDF8] px-8 shadow-[0_4px_12px_rgba(61,39,29,0.06),0_1px_3px_rgba(61,39,29,0.04)] max-[1000px]:w-[calc(100%-48px)] max-[1000px]:max-w-none max-[760px]:bottom-4 max-[760px]:h-auto max-[760px]:w-[calc(100%-24px)] max-[760px]:grid-cols-2 max-[760px]:gap-y-2 max-[760px]:rounded-xl max-[760px]:px-3 max-[760px]:py-3">
+      <div className="absolute bottom-6 left-1/2 z-10 grid h-[92px] w-[calc(100%-80px)] max-w-[calc(var(--page-max)-5rem)] -translate-x-1/2 grid-cols-4 rounded-2xl bg-[#FFFDF8] px-8 shadow-[0_4px_12px_rgba(61,39,29,0.06),0_1px_3px_rgba(61,39,29,0.04)] max-[1000px]:w-[calc(100%-48px)] max-[1000px]:max-w-none max-[760px]:bottom-4 max-[760px]:h-auto max-[760px]:w-[calc(100%-24px)] max-[760px]:grid-cols-2 max-[760px]:gap-y-2 max-[760px]:rounded-xl max-[760px]:px-3 max-[760px]:py-3">
         {trustItems.map((item, index) => (
           <div
             className="flex items-center gap-3 px-5 first:pl-0 last:pr-0 [&:not(:first-child)]:border-l [&:not(:first-child)]:border-[#eadfcf] max-[760px]:gap-2 max-[760px]:px-1 max-[760px]:[&:not(:first-child)]:border-l-0"

@@ -69,9 +69,9 @@ export function Footer() {
   return (
     <footer
       id="contact-us"
-      className="scroll-mt-28 bg-[#3d271d] px-8 pb-5 pt-12 text-[#fffdf8] max-[760px]:px-6 max-[760px]:pb-6 max-[760px]:pt-10"
+      className="scroll-mt-28 bg-[#3d271d] pb-5 pt-12 text-[#fffdf8] max-[760px]:pb-6 max-[760px]:pt-10"
     >
-      <div className="mx-auto grid max-w-310 grid-cols-[1.35fr_repeat(4,1fr)] gap-x-10 gap-y-10 max-[1000px]:grid-cols-[1.1fr_repeat(3,1fr)] max-[760px]:grid-cols-2 max-[760px]:gap-x-7 max-[760px]:gap-y-8">
+      <div className="page-container grid grid-cols-[1.35fr_repeat(4,1fr)] gap-x-10 gap-y-10 max-[1000px]:grid-cols-[1.1fr_repeat(3,1fr)] max-[760px]:grid-cols-2 max-[760px]:gap-x-7 max-[760px]:gap-y-8">
         <div className="max-[760px]:col-span-2">
           <a
             className="inline-flex items-center"
@@ -146,8 +146,10 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-8 flex max-w-310 items-center justify-center border-t border-[#e4ad4d]/25 pt-4 text-center text-xs font-medium text-[#eadfce]">
-        © 2025 SomoRa Horizon LLP. All Rights Reserved.
+      <div className="page-container mt-8">
+        <div className="flex items-center justify-center border-t border-[#e4ad4d]/25 pt-4 text-center text-xs font-medium text-[#eadfce]">
+          © 2025 SomoRa Horizon LLP. All Rights Reserved.
+        </div>
       </div>
     </footer>
   );

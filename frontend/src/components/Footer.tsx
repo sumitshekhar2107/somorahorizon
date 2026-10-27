@@ -1,4 +1,5 @@
 import somoraLogo from "../assets/Landing_page/somora_newlogo.png";
+import { mainSiteHref } from "../siteNavigation";
 
 const footerGroups = [
   {
@@ -75,7 +76,7 @@ export function Footer() {
         <div className="max-[760px]:col-span-2">
           <a
             className="inline-flex items-center"
-            href="/#home"
+            href={mainSiteHref("home")}
             aria-label="SomoRa Horizon home"
           >
             <img
@@ -91,7 +92,7 @@ export function Footer() {
             {socialLinks.map((social) => (
               <a
                 className="flex h-9 w-9 items-center justify-center rounded-full bg-[#fffdf8] text-[#3d271d] transition hover:bg-[#e4ad4d] hover:text-[#3d271d]"
-                href="/#home"
+                href={mainSiteHref("home")}
                 key={social.label}
                 aria-label={social.label}
               >
@@ -122,7 +123,7 @@ export function Footer() {
                 <li key={link}>
                   <a
                     className="no-underline transition hover:text-[#e4ad4d]"
-                    href={`/#${link.toLowerCase().replaceAll(" ", "-")}`}
+                    href={mainSiteHref(link.toLowerCase().replaceAll(" ", "-"))}
                   >
                     {link}
                   </a>

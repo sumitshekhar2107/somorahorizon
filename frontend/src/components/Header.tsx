@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { mainSiteHref } from "../siteNavigation";
 import somoraLogo from "../assets/Landing_page/logo_somora-removebg-preview.png";
 
 const navItems = [
@@ -30,7 +31,7 @@ export function Header() {
         <div className="page-container flex items-center gap-[38px] max-[1000px]:gap-[18px] max-[760px]:justify-between">
           <a
             className="flex h-18 shrink-0 items-center no-underline max-[760px]:h-13"
-            href="/#home"
+            href={mainSiteHref("home")}
             aria-label="SomoRa Horizon home"
           >
             <img
@@ -55,7 +56,7 @@ export function Header() {
                 return (
                   <a
                     className={`relative inline-flex items-center gap-[7px] pb-2 text-[15px] font-bold no-underline after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-full after:origin-left after:bg-[#e4ad4d] after:transition-transform after:duration-300 hover:text-[#792b35] focus-visible:text-[#792b35] ${isActive ? "text-[#792b35] after:scale-x-100" : "text-[#3d271d] after:scale-x-0"}`}
-                    href={`/#${target}`}
+                    href={mainSiteHref(target)}
                     key={item}
                     aria-current={isActive ? "page" : undefined}
                   >
@@ -160,7 +161,7 @@ export function Header() {
               return (
                 <a
                   className={`flex items-center justify-between border-b border-[#eadfcf] py-3 text-sm font-semibold no-underline last:border-b-0 ${isActive ? "text-[#792b35]" : "text-[#3d271d]"}`}
-                  href={`/#${target}`}
+                  href={mainSiteHref(target)}
                   key={item}
                   aria-current={isActive ? "page" : undefined}
                   onClick={() => setMobileMenuOpen(false)}

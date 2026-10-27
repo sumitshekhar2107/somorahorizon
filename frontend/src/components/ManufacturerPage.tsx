@@ -1,3 +1,5 @@
+import { mainSiteHref } from "../siteNavigation";
+
 export function ManufacturerPage() {
   return (
     <section
@@ -55,7 +57,7 @@ export function ManufacturerPage() {
 
         <a
           className="mt-8 inline-flex min-h-11 items-center text-sm font-bold text-[#792b35] underline underline-offset-4"
-          href="/#home"
+          href={mainSiteHref("home")}
         >
           <span aria-hidden="true">←&nbsp;</span> Back to home
         </a>

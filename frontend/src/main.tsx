@@ -6,22 +6,15 @@ import { HeroSection } from "./components/HeroSection";
 import { LandingSections } from "./components/LandingSections";
 import { QualityPage } from "./components/QualityPage";
 import { ManufacturerPage } from "./components/ManufacturerPage";
+import { currentPage } from "./siteNavigation";
 import "./index.css";
 
 function App() {
-  const [page, setPage] = useState(() =>
-    window.location.pathname.replace(/\/$/, "") === "/manufacturer"
-      ? "/manufacturer"
-      : window.location.hash,
-  );
+  const [page, setPage] = useState(currentPage);
 
   useEffect(() => {
     const updatePage = () => {
-      setPage(
-        window.location.pathname.replace(/\/$/, "") === "/manufacturer"
-          ? "/manufacturer"
-          : window.location.hash,
-      );
+      setPage(currentPage());
       if (["#home", "#quality"].includes(window.location.hash)) {
         window.scrollTo(0, 0);
       }

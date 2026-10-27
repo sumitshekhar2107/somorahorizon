@@ -2,6 +2,16 @@
 
 ## Manufacturer page and packaging QR code
 
+### Manufacturer subdomain (Vercel)
+
+The app renders the manufacturer page at `https://manufacturer.somorahorizon.com/` based on the hostname, while keeping `/manufacturer` available on the main domain. Navigation on the subdomain links back to the main website.
+
+1. In the existing frontend Vercel project, open **Settings → Domains** and add `manufacturer.somorahorizon.com` to the production environment. Attach it to this same project, without redirecting it to the main domain.
+2. At the domain's DNS provider, create a **CNAME** record with name **manufacturer** and the exact target shown by Vercel. Remove any conflicting records for this name; do not change the main domain's records. If DNS is managed by Vercel, follow its automatic configuration instead.
+3. Commit/push the app changes and deploy. The project's Root Directory should be `frontend`, where `vercel.json` enables SPA fallback.
+4. Wait for Vercel to confirm valid DNS and issue the HTTPS certificate, then open the subdomain and test the home/quality links.
+5. Once verified publicly, use `https://manufacturer.somorahorizon.com/` as the packaging QR destination.
+
 - The dedicated page is available at `/manufacturer` (for example, `https://your-domain.com/manufacturer`). It is intentionally not listed in the main navigation.
 - Configure production hosting to serve `index.html` for `/manufacturer` (an SPA fallback/rewrite, not a redirect to `/`). This allows direct QR visits and browser refreshes to work. Vite provides this fallback during development.
 - Before publishing, replace the pending-information content in `src/components/ManufacturerPage.tsx` with verified manufacturer details. Do not treat the brand contact details as the legal manufacturer details.

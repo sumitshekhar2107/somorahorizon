@@ -322,15 +322,15 @@ export function LandingSections() {
       </section>
 
       <section className="page-container pb-20 text-[#3d271d] max-[760px]:pb-14">
-        <div className="flex flex-col justify-between gap-8 rounded-[2rem] bg-[#efe2ca] px-10 py-11 md:flex-row md:items-center md:px-14">
+        <div className="flex flex-col justify-between gap-8 rounded-[2rem] bg-[#3d271d] px-10 py-11 text-[#fffdf8] md:flex-row md:items-center md:px-14">
           <div className="max-w-xl">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#8c5d27]">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#e4ad4d]">
               A note from SomoRa
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold leading-[1.15] max-[760px]:text-2xl">
               Good things are worth sharing.
             </h2>
-            <p className="mt-2 text-sm leading-6 text-[#705c4b]">
+            <p className="mt-2 text-sm leading-6 text-[#eadfce]">
               Get in touch for SomoRa updates, product enquiries, and
               distribution information.
             </p>

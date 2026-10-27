@@ -70,7 +70,7 @@ export function Footer() {
   return (
     <footer
       id="contact-us"
-      className="scroll-mt-28 bg-[#3d271d] pb-5 pt-12 text-[#fffdf8] max-[760px]:pb-6 max-[760px]:pt-10"
+      className="scroll-mt-28 bg-[#efe2ca] pb-5 pt-12 text-[#3d271d] max-[760px]:pb-6 max-[760px]:pt-10"
     >
       <div className="page-container grid grid-cols-[1.35fr_repeat(4,1fr)] gap-x-10 gap-y-10 max-[1000px]:grid-cols-[1.1fr_repeat(3,1fr)] max-[760px]:grid-cols-2 max-[760px]:gap-x-7 max-[760px]:gap-y-8">
         <div className="max-[760px]:col-span-2">
@@ -85,13 +85,13 @@ export function Footer() {
               alt="SomoRa Horizon LLP"
             />
           </a>
-          <p className="mt-2 text-xs font-semibold tracking-wide text-[#eadfce]">
+          <p className="mt-2 text-xs font-semibold tracking-wide text-[#705c4b]">
             Sourcing Quality. Delivering Value.
           </p>
           <div className="mt-5 flex gap-3" aria-label="Social media links">
             {socialLinks.map((social) => (
               <a
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-[#fffdf8] text-[#3d271d] transition hover:bg-[#e4ad4d] hover:text-[#3d271d]"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-[#3d271d] text-[#fffdf8] transition hover:bg-[#792b35] hover:text-[#fffdf8]"
                 href={mainSiteHref("home")}
                 key={social.label}
                 aria-label={social.label}
@@ -115,14 +115,14 @@ export function Footer() {
 
         {footerGroups.map((group) => (
           <div key={group.title}>
-            <h2 className="text-sm font-bold text-[#e4ad4d]">
+            <h2 className="text-sm font-bold text-[#8c5d27]">
               {group.title} <span aria-hidden="true">›</span>
             </h2>
-            <ul className="mt-3 space-y-2 text-[13px] font-medium leading-snug text-[#f0e8da]">
+            <ul className="mt-3 space-y-2 text-[13px] font-medium leading-snug text-[#3d271d]">
               {group.links.map((link) => (
                 <li key={link}>
                   <a
-                    className="no-underline transition hover:text-[#e4ad4d]"
+                    className="no-underline transition hover:text-[#792b35]"
                     href={mainSiteHref(link.toLowerCase().replaceAll(" ", "-"))}
                   >
                     {link}
@@ -134,10 +134,10 @@ export function Footer() {
         ))}
 
         <div className="max-[1000px]:col-span-4 max-[1000px]:grid max-[1000px]:grid-cols-2 max-[1000px]:gap-4 max-[760px]:col-span-2 max-[760px]:grid-cols-1">
-          <h2 className="text-sm font-bold text-[#e4ad4d]">CONTACT</h2>
-          <address className="mt-3 space-y-2 text-[13px] not-italic leading-snug text-[#f0e8da] max-[1000px]:mt-0">
+          <h2 className="text-sm font-bold text-[#8c5d27]">CONTACT</h2>
+          <address className="mt-3 space-y-2 text-[13px] not-italic leading-snug text-[#3d271d] max-[1000px]:mt-0">
             <a
-              className="block no-underline transition hover:text-[#e4ad4d]"
+              className="block no-underline transition hover:text-[#792b35]"
               href="mailto:admin@somorahorizon.com"
             >
               admin@somorahorizon.com
@@ -148,7 +148,7 @@ export function Footer() {
       </div>
 
       <div className="page-container mt-8">
-        <div className="flex items-center justify-center border-t border-[#e4ad4d]/25 pt-4 text-center text-xs font-medium text-[#eadfce]">
+        <div className="flex items-center justify-center border-t border-[#8c5d27]/25 pt-4 text-center text-xs font-medium text-[#705c4b]">
           © 2025 SomoRa Horizon LLP. All Rights Reserved.
         </div>
       </div>

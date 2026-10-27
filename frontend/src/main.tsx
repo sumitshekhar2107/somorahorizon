@@ -28,12 +28,18 @@ function App() {
     };
   }, []);
 
+  if (page === "/manufacturer") {
+    return (
+      <main>
+        <ManufacturerPage />
+      </main>
+    );
+  }
+
   return (
     <main className="site-shell">
       <Header />
-      {page === "/manufacturer" ? (
-        <ManufacturerPage />
-      ) : page === "#quality" ? (
+      {page === "#quality" ? (
         <QualityPage />
       ) : (
         <>
